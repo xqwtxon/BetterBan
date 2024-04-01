@@ -411,7 +411,7 @@ class BetterBan extends PluginBase
      * @param string $source
      * @param string $reason
      */
-    public function sendBanMessageToDC(string $banned, string $source, string $reason)
+    public function sendBanMessageToDC(string $banned, string $source, string $reason): void
     {
         $title = str_replace(["{banned}", "{source}", "{reason}", "{line}"], [$banned, $source, $reason, "\n"], $this->getConfig()->get("ban-title"));
         $message = str_replace(["{banned}", "{source}", "{reason}", "{line}"], [$banned, $source, $reason, "\n"], $this->getConfig()->get("ban-message"));
@@ -432,7 +432,7 @@ class BetterBan extends PluginBase
     /**
      * @param string $banned
      */
-    public function sendBanUpdatedMessageToDC(string $banned)
+    public function sendBanUpdatedMessageToDC(string $banned): void
     {
         $title = str_replace(["{banned}", "{line}"], [$banned, "\n"], $this->getConfig()->get("ban-updated-title"));
         $message = str_replace(["{banned}", "{line}"], [$banned, "\n"], $this->getConfig()->get("ban-updated-message"));
@@ -454,7 +454,7 @@ class BetterBan extends PluginBase
      * @param string $target
      * @param string $source
      */
-    public function sendPardonMessageToDC(string $target, string $source)
+    public function sendPardonMessageToDC(string $target, string $source): void
     {
         $title = str_replace(["{target}", "{source}", "{line}"], [$target, $source, "\n"], $this->getConfig()->get("pardon-title"));
         $message = str_replace(["{target}", "{source}", "{line}"], [$target, $source, "\n"], $this->getConfig()->get("pardon-message"));
@@ -477,7 +477,7 @@ class BetterBan extends PluginBase
      * @param string $source
      * @param string $reason
      */
-    public function sendIpBanMessageToDC(string $ip, string $source, string $reason)
+    public function sendIpBanMessageToDC(string $ip, string $source, string $reason): void
     {
         $title = str_replace(["{ip}", "{source}", "{reason}", "{line}"], [$ip, $source, $reason, "\n"], $this->getConfig()->get("banip-title"));
         $message = str_replace(["{ip}", "{source}", "{reason}", "{line}"], [$ip, $source, $reason, "\n"], $this->getConfig()->get("banip-message"));
@@ -498,7 +498,7 @@ class BetterBan extends PluginBase
     /**
      * @param string $ip
      */
-    public function sendIpBanUpdatedMessageToDC(string $ip)
+    public function sendIpBanUpdatedMessageToDC(string $ip): void
     {
         $title = str_replace(["{ip}", "{line}"], [$ip, "\n"], $this->getConfig()->get("ipban-updated-title"));
         $message = str_replace(["{ip}", "{line}"], [$ip, "\n"], $this->getConfig()->get("ipban-updated-message"));
@@ -520,7 +520,7 @@ class BetterBan extends PluginBase
      * @param string $ip
      * @param string $source
      */
-    public function sendPardonIpMessageToDC(string $ip, string $source)
+    public function sendPardonIpMessageToDC(string $ip, string $source): void
     {
         $title = str_replace(["{ip}", "{source}", "{line}"], [$ip, $source, "\n"], $this->getConfig()->get("pardonip-title"));
         $message = str_replace(["{ip}", "{source}", "{line}"], [$ip, $source, "\n"], $this->getConfig()->get("pardonip-message"));
@@ -542,7 +542,7 @@ class BetterBan extends PluginBase
      * @param string $target
      * @param string $source
      */
-    public function sendKickMessageToDC(string $target, string $source)
+    public function sendKickMessageToDC(string $target, string $source): void
     {
         $title = str_replace(["{target}", "{source}", "{line}"], [$target, $source, "\n"], $this->getConfig()->get("kick-dc-title"));
         $message = str_replace(["{target}", "{source}", "{line}"], [$target, $source, "\n"], $this->getConfig()->get("kick-dc-message"));

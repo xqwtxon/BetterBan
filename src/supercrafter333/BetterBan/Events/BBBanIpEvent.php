@@ -91,7 +91,7 @@ class BBBanIpEvent extends Event implements Cancellable
      */
     public function sendDiscordWebhookMessage(): void
     {
-        $reason = $this->reason === null ?? "";
+        $reason = $this->reason === null ? "" : $this->reason;
         BetterBan::getInstance()->sendIpBanMessageToDC($this->IpAddress, $this->source, $reason);
     }
 }
