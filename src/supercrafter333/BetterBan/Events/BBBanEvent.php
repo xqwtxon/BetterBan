@@ -109,7 +109,7 @@ class BBBanEvent extends Event implements Cancellable {
 	 * @return void
 	 */
 	public function sendDiscordWebhookMessage() : void {
-		$reason = $this->reason === null ?? "";
+        $reason = $this->reason === null ? "" : $this->reason;
 		BetterBan::getInstance()->sendBanMessageToDC($this->target, $this->source, $reason);
 	}
 }
