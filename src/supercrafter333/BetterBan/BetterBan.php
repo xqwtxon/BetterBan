@@ -35,7 +35,7 @@ use CortexPE\DiscordWebhookAPI\Message;
 use CortexPE\DiscordWebhookAPI\Webhook;
 use DateInterval;
 use DateTime;
-use dktapps\pmforms\BaseForm;
+use supercrafter333\BetterBan\libs\_5738da68f24b8eec\dktapps\pmforms\BaseForm;
 use Exception;
 use pocketmine\permission\PermissionManager;
 use pocketmine\plugin\PluginBase;
@@ -209,7 +209,7 @@ class BetterBan extends PluginBase {
 	 * @return bool
 	 */
 	public static function pmformsExists() : bool {
-		return class_exists(\dktapps\pmforms\BaseForm::class);
+		return class_exists(\supercrafter333\BetterBan\libs\_5738da68f24b8eec\dktapps\pmforms\BaseForm::class);
 	}
 
 	/**
